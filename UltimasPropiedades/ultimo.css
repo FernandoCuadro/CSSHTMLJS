@@ -1,0 +1,29 @@
+
+/*
+Direction
+    direccion del texto se puede udar rtl(derecha a izquierda) el por defect ltr(izq a der)
+Letter-spacing
+    separar las letras a gusto    
+scroll-behavior
+    hace que el scroll baje mas lento por ejemplo lo que da un mejor efecto
+user-select
+    para que no puedan seleccionar texto de la pagina     
+*/
+*{
+    scroll-behavior: smooth;
+}
+
+.contenedor{
+    padding: 20px;
+    background: lawngreen;
+    font-size: 20px;
+    direction: rtl;
+    letter-spacing: 4px;
+}
+
+#contenido{
+    background: red;
+    font-size: 20px;
+    user-select: none;
+}
+

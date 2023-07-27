@@ -1,0 +1,38 @@
+body{
+margin: 30px;
+padding: 0;
+background-color: darkgrey;
+}
+
+h1{
+    color: goldenrod;
+    font-family: arial;
+    font-size: 70px;
+    text-decoration: solid;
+    text-align: center;
+    
+}
+
+h1:hover{
+    color:black;
+    text-decoration: underline;
+    text-align: left;
+    transition: 1;
+}
+
+p{
+    color: darkgreen;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: dotted;
+}
+
+p:hover{
+    text-decoration: underline;
+    text-align: left;
+}
+
+[atributo="unic"]{
+    text-decoration: dotted;
+    color: aqua;
+}

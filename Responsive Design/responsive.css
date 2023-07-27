@@ -1,0 +1,62 @@
+/*
+Responsive Design
+    Es un consepto que se aplica a css, no es propio de css, lo que hace es
+    adaptar todo el contenido de la pagina web a todas las resoluciones
+    trabaja con estructurar flexibles:
+        -contenedores flexibles
+        -imagenes y videos flexibles
+    trabaja con Media Queries:
+        @media = Se usa en consultas de mediospara aplicar diferentes estilos para diferentes dispositivos
+                    nos ayuda a consultar y validar:
+                        -ancho y alto de la ventana grafica
+                        -ancho y alto del dispositivo
+                        -orientacion(Cuando el Telefono o tableta estan en modo horizontal o vertical)
+                        -resolucion
+        existen 4 tipos de Media Queries:
+            all
+                Apto para todos los dispositivos.
+            print
+                Destinado a material impreso y visualizacion en pamtalla el modo vista previa de impresion
+            screen
+                Destinado a las pantallas
+            speech
+                Destinado a sintetizadores de voz
+                
+                
+   Operadores AND - OR 
+   Orientacion:
+                -landscape = Cuando es mas ancho que largo
+                -portrait = Cuando es mas largo que ancho            
+
+
+Hay dos formas de realizar en media:
+        Mobile-First = Se adapta la web primero a dispositivos mobiles, luego a tablet a laptop y asi.
+        Desktop-First = Se adapta la web primero a escritorio luego a laptop tablet y moviles
+        Content-First = Se estructura en base a lo que tiene la pagina, primero se preocupa por el contenido                 
+*/
+
+.responsive{
+    background-color: cadetblue;
+    font-size: 40px;
+}
+
+/*@media tipo a usar(screen) operador(and) */
+
+
+@media screen and (min-width: 400px) and (max-width: 600px){
+     .responsive{
+        background-color: burlywood;
+        font-size: 50px;
+
+    }
+} 
+
+@media screen and (min-width: 700px){
+  .responsive{
+    background-color: greenyellow;
+    font-size: 30px;
+  }  
+} 
+    
+
+    

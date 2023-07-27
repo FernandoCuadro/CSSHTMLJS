@@ -1,0 +1,15 @@
+*{
+    font-family: Arial;
+    margin: 20px;
+    padding: 20px;
+}
+
+ #contenido::before{
+    color: red;
+    content: "Hola";
+ }
+
+ #contenido::after{
+    color: yellow;
+    content: "todos";
+ }

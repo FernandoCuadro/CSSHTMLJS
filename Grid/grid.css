@@ -1,0 +1,213 @@
+
+/*GRID == Es un estilo de layout y es una propiedad del display, trabaja een grillas
+
+_grid-conteainer: Es toda la grilla
+_grid-item: Son elementos que estan dentro del contenedor, forman parte de el
+_grid-cell: Son cada una de las divisiones del grid
+_grid-track(column row): Row son filas y column columnas
+_grid-area: Son rangos que seleccionamos nosotros ademas son consecutivos, no se pueden cruzar en una misma
+            grilla tampoco  en forma de L y tienen que ser verticales o horizontales
+_grid-line(column line, row line): Las primeras lineas son donde empieza el grid             
+*/
+
+
+#contenedor{
+    display: grid;
+    grid-template-rows: 100px 100px 100px;/*Crea las filas que usaras, al usar la medida 1fr usa el espacio sobrante*/
+    grid-template-columns: 150px 150px 150px;/*Crea las columnas que se usaran
+    grid-template-columns: repeat(3, 150px); si todas las medidas son la misma se puede utilizar repeat*/
+    grid-row-gap: 5px; /*Margin entre las filas*/
+    grid-column-gap: 15px;/*Margin entre las las columnas*/
+
+}
+
+.items{
+    border: 1px solid red;
+}
+
+
+
+.items:first-child{                  /*first-child{} = Selecciona el primer item*/
+    background-color: gray;
+    grid-row: 1 / 3;                 /*La primera celda se extiende hasta la ultima tercera fila*/
+    grid-column: 1 / 4;              /*La primera columna se extiende hasta la tercera columna*/   
+    
+}
+
+.items:nth-child(2){
+    background-color: aqua;
+    grid-row: 3/1;
+    grid-column: 3/3;
+}
+
+
+
+/*Grid Explicito y implicito ==
+        Es cuando se crea una fila o columna de mas por la cantidad de items, eso se le llama grid explicito
+   Propiedades:
+   grid-auto-rows: es como el template a diferencia que solo se le da la medida
+   grid-auto-column: lo mismo pero para las columnas
+   grid-auto-flow:column := las celdas sobrante se comportaran como una columna
+   grid-auto-flow:rows := las celdas sobrantes se comportara como fila  
+   grid-auto-flow:dense := si hay espacios vacios los rellena 
+*/
+
+#gridexplicito{
+    border: 1px solid green;
+    background-color: gray;
+    display: grid;
+    grid-template-columns: repeat(4, 150px) ;
+    grid-template-rows: repeat(4, 150px) ;
+    grid-auto-columns: 150px;
+    grid-auto-flow: column;
+    grid-auto-flow: dense;
+    
+    
+    
+    
+}
+
+.itemsex{
+    border: 1px solid blue;
+    background-color: azure ;
+    width: 150px;
+    height: 150px;
+}
+
+.itemsex:nth-child(3){
+    grid-column: 4 / 7;
+}
+
+
+
+
+
+
+/*
+Grid Dinamico=
+        Estructuras dinamicas para que el grid sea mas flexible
+    Propiedades=:
+        minmax():Es usado en el template con el repeat "grid-template-rows: repeat(3, minmax(100px, 150px))"
+                  le da a la grilla una medida minima y maxima  
+        min-content: Minimo que va a medir la celda
+        max-content: Maximo que va a medir la celda
+        auto-fill: Genera tantas columnas o filas que cumplan con las condiciones del repeat            
+        auto-fit: Escala la diferencia cuando se va agrandando la pantalla
+*/
+
+#griddinamico{
+    display: grid;
+    background-color: gray;
+    border: 1px solid green;
+    grid-template-rows: repeat(3, 200px);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+
+.itemsdin{
+    border: 2px solid yellow;
+    background-color: bisque;
+}
+
+
+/*Alineacion y control de flujo=
+        Diferencia con flex: Aca hay dos tipos de alineacion, tanto alineacion del contenedor"que inlcluye
+        alineacion de todos los items, la alineacion de columnas y filas" y la alineacion
+        particular de cada elemento individual        
+
+    Propiedades del contenedor :
+        justify-items:center =: Centra los items, los items a no tener medidas quedan en la medida minima
+        justify-items:start =: Pone el item al inicio
+        justify-items:end =: Pone el item al final
+        align-item:center =: Centra el item verticalmente
+        align-item:start =: Pone el item al inicio verticalmente
+        align-item:end =: Pone el item al final verticalmente
+        justify-content:center =: alinea las columnas para ubicarlas en el centro
+        justify-content:start =: alinea las columnas para ubicarlas en el inicio
+        justify-content:end =: alinea las columnas para ubicarlas en el final
+        justify-content:space-around =:
+        justify-content:space-between:=
+        justify-content:space-evenly:= Las misma distancia para todas las cajas
+        align-content:center =: alinea las filas en el centro
+        align-content:start =: alinea las filas al inicio
+        align-content:end =: aliena las filas al final
+        align-content:space-around =:
+        align-content:space-between:=
+        align-content:space-evenly:= Las misma distancia para todas las cajas
+
+
+*/
+#alineacion{
+    height: 900px;
+    border: 1px solid green;
+    background-color: gainsboro;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 250px));
+    grid-template-rows: repeat(3, minmax(200px, 250px));
+    justify-items: center;
+    align-items: center;
+    
+    align-content: end;
+    
+}
+
+/*Se puede modificar cada item individualmente
+    align-self:start :=Alinea individualmente cada item al inicio
+    align-self:end :=Alinea individualmente cada item al final
+    align-self:center :=Alinea individualmente cada item al medio
+    justify-self:center :=Alinea individualmente cada item al medio
+    justify-self:center :=Alinea individualmente cada item al medio
+    justify-self:center :=Alinea individualmente cada item al medio
+    place-self: align-self justify-self =: simplifica poniendo tanto align como justify
+    order: numero =: funciona igual que un z-index del flex
+
+*/
+.itemsali:first-child{
+
+    align-self: end;
+}
+
+.itemsali:nth-child(2){
+    
+    justify-self: end;
+    order: 3;
+}
+
+.itemsali:nth-child(3){
+    justify-self: start;
+}
+
+.itemsali:nth-child(4){
+
+    align-self: start;
+}
+
+.itemsali:nth-child(7){
+    align-self: start;
+    justify-self: end;
+}
+.itemsali:nth-child(8){
+    align-self: start;
+    justify-self: start;
+}
+
+.itemsali:nth-child(5){
+    align-self: end;
+    justify-self: start;
+}
+
+.itemsali:nth-child(6){
+    align-self: end;
+    justify-self: start;
+}
+
+.itemsali:nth-child(9){
+    align-self: start;
+    justify-self: start;
+}
+
+.itemsali{
+    background-color: aquamarine;
+    border: 2px solid black;
+    padding: 50px;
+}

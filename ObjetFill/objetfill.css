@@ -1,0 +1,34 @@
+
+*{
+    margin: 100px;
+    padding: 100px;
+}
+
+#caja{
+    margin: 0;
+    padding: 0;
+    width: 500px;
+    height: 200px;
+    background-color: violet;
+
+}
+
+#caja img{
+    margin: 0;
+    padding: 0;
+    width: 500px;
+    height: 200px;
+    object-position: right 100px, left 100px;
+    object-fit: contain;
+ 
+}
+
+/*Objet-fit = Se usa para las imagenes se puede ajustar resoluciones, ajustar la imagen a una caja, etc
+Propiedades ==
+Contain = Propiedad por defecto, hace que la imagen se ajuste al contenido
+Cover = Propiedad que hace que la imagen se ajuste al contenedor
+None = No realiza cambios a la imagen, la deja por defecto
+Scale-Down = Se queda con resolucion mas chica
+*/
+
+/*Object-position = posiciona las imagenes tanto top,right,left,bottom*/

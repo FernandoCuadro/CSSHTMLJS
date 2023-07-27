@@ -1,0 +1,56 @@
+/*
+Transition
+    Es una propiedad que nos permite realizar transisiones dentro de los elementos, basicamente
+    muestra frame por frame la diferencias de estado
+porpiedades:
+        -transition-property: propiedad all none = Se pone la propiedad que vas a realizar el transition
+        -transition-duration: duration = duracion del cambio
+        estas dos propiedades si o si tienen que tener un valor
+        -transition-delay: duration = duracion de espera antes del cambio
+        -transition- timing-function: linear | ease | ease-in | ease-out | ease-in-out | step-start | steap-end
+        | steps(int,start|end) | initial | inherit = es la curva del tiempo en la que va a tardar
+         en relizarse la animacion, transicion en funcion del tiempo
+*/
+
+
+#contenedor{
+    height: 100%;
+    background-color: aqua;
+    padding: 20px 5px;
+}
+
+.caja{
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    margin: 30px;
+    transition-property: left, background-color;
+    transition-duration: 2s;
+    transition-delay: 1s;
+    position: relative;
+    left: 0;
+}
+
+
+#contenedor:hover > .caja{
+    
+    left: 90%;
+    background-color: whitesmoke;
+}
+
+.caja:first-child{
+    transition-timing-function: linear;
+}
+
+.caja:nth-child(2){
+    transition-timing-function: ease;
+}
+.caja:nth-child(3){
+    transition-timing-function: ease-in;
+}
+.caja:nth-child(4){
+    transition-timing-function: ease-out;
+}
+.caja:nth-child(5){
+    transition-timing-function: ease-in-out;
+}

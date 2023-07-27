@@ -1,0 +1,18 @@
+*{
+    font-size: 20px;
+    font-family: 'Times New Roman';
+}
+
+.rueda{
+    background-color: gray;
+    width: 250px;
+    height: 200px;
+    border: 1px solid green;
+    overflow: auto;
+}
+
+/*Overflow = Es el texto que sobresale de la pantalla
+Overflow: auto = Detecta si el texto sobresale de la pantalla y lo corrige
+Overflow: hidden = Esconde el scroll
+Overflow: scroll = Muestra el scroll si o si
+Overflow se divide en dos overflow-x y overflow-y*/

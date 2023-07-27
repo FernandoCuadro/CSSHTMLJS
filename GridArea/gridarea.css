@@ -1,0 +1,46 @@
+
+
+/*
+    GRID AREA
+        Es un conjunto consecutivos de celdas, podrian estar en cualquier lado, 
+        minimo tiene que tener dos celdas
+
+
+*/
+
+#gridarea{
+    background-color: gray;
+    display: grid;
+    margin: 10px;
+    grid-template-areas: 
+    "header header header"
+    "aside main main"
+    "aside main main"
+    "footer footer footer"
+     ;
+     grid-template-rows: repeat(auto-fill, 1fr);
+     height: 90vh;
+     border: 3px solid black;
+
+}
+
+.griditem{
+    padding: 10px;
+}
+
+.Gfooter{
+    background-color: chartreuse;
+    grid-area: footer;
+}
+.Gheader{
+    background-color: aqua;
+    grid-area: header;
+}
+.Gmain{
+    background-color: yellow;
+    grid-area: main;
+}
+.Gaside{
+    background-color: brown;
+    grid-area: aside;
+}

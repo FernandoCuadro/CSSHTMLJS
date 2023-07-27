@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#flexcont{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.flexitem{
+    background-color: green;
+    margin: 4px;
+    min-width: 120px;
+    height: 120px;
+    flex-grow: 1;
+}
+
+/*
+FlexBox==Son cajas flexibles, es una nueva forma de maquetar, flex requiere de dos cosas
+            un contenedor que actua como un display block y items a los cuales modificar
+
+El flexbox esta formado por cross axis [eje y] y el main axis [eje x].
+Cross start y cross end formal el cross axis, main start main end forman main axis.
+
+Los items dentro de un flex son flex items, los divs dentro del contenedor son considerados
+flex items, lo que haya dentro de los divs no son considerados items
+
+
+flex-direction: Nos permite cambiar la direccion de los items, se utiliza en el contenedor
+                aunque tambien afecta a los items.
+
+row: Valor por defecto se posiciona como van las filas
+column: Se comporta como una columna
+row-reverse: En vez de ir de izquierda a derecha va de derecha a izquierda
+column-reverse: En vez de ir de arriba a abajo va de abajo a arriba
+
+flex-wrap: wrap = No es flexible ya no mantiene ya no mantiene los items en la misma linea.
+
+flex-wrap: wrap-reverse = En vez de ir hacia abajo, va hacia arriba.
+
+flex-wrap: nowarp = Valor por defecto, no hace efecto el warp
+
+flex-wrap: flex-flow = Abrevia flex-direction y flex-wrap, es cuando se usan las dos a la vez
+
+justify-content: Manejo del contenido para alinearlo
+center: Centra contenido
+space-around: Da espacio al contenido
+space-between: Da un margen automatico a las cajas
+space-around: Deja la mayor cantidad de espacio entre cajas
+space-evenly: Deja el mismo margen entre cajas, a diferencia del around que son distintas medidas
+align-items: Se usa cuando hay una linea de item flexitems
+srtreth: Propiedad por defecto
+flex-start: Los ubica al final, con la propiedad por defecto se estira toda la pagina
+flex-end: Los ubica al final de la pagina
+center: Centra los flexitems
+align-content: Lo mismo pero cuando hay mas de una linea
+
+flex-item: darle propiedades a los items y no al contenedor
+margin: dentro de una caja se comporta distinto, hace lo contrario por ejemplo si haces margin-top:auto,
+        lo que hara es ir hacia abajo
+
+flex-grow: Agarra el espacio sobrante y lo reparte entre las cajas sobrantes
+flex-basis: Es como un width pero le da mas importancia a las cajas
+flex-shrink: Controla el espacio que tienen las cajas, sirve para organizar las cajas
+flex: Agrupa las propiedades flex(flex-growl, flex-shrink, flex-basis)
+order: Como el z-index mientras mas grande el numero mas al final va       
+
+*/

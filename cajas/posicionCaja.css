@@ -1,0 +1,90 @@
+#cajas{
+    top: 50px;
+    left: 100px;
+    width: 320px;
+    height: 320px;
+    position: relative;
+    background-color: black;
+    /*Cuando es relative se toma las medidas del contenedor para poner cosas adentro*/
+}
+
+.caja1{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: blanchedalmond;
+    top: 0;
+    
+}
+
+.caja2{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: blanchedalmond;
+    bottom: 0; 
+}
+
+.caja3{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: blanchedalmond;
+    right: 0;
+}
+
+.caja4{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: blanchedalmond;
+    right: 0;
+    bottom: 0;
+}
+
+.caja5{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: blanchedalmond;
+    top: 125px;
+}
+
+.caja6{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: blanchedalmond;
+    right: 125px;
+}
+
+.caja7{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: blanchedalmond;
+    top: 125px;
+    right: 0;   
+}
+
+.caja8{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: blanchedalmond;
+    right: 125px;
+    bottom: 0;
+}
+
+.caja9{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: blanchedalmond;
+    right: 125px;
+    bottom: 125px;
+}
+
+/*Si sabes el tamaño de las cajas: para ubicarlas en el medio es necesario
+    Mitad del contenedor de las cajas- mitad de la caja
+    Sino se deja en 0 todas las direcciones TOP LEFT RIGHT BOtTOM*/

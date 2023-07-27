@@ -1,0 +1,18 @@
+#seguir{
+    position: fixed;
+}
+/*Sirve para que ek texto te siga si seguis bajando, podria utilizarse para advertencias,
+    o para una barra de navegacion movible*/
+
+p{
+    color: gray;
+    font-family: Verdana;
+    font-size: 14px;
+
+}
+
+#advertencia{
+    color: red;
+    font-family: Verdana;
+    font-size: 16px;
+}

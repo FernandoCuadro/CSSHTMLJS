@@ -1,0 +1,37 @@
+* {
+margin: 0;
+padding: 0;
+background-color: whitesmoke;
+font-family: cursive;
+}
+
+.forma{
+    border: 1px solid red;
+    background-color: yellow;
+    padding: 10px;
+
+    
+}
+
+.menus{
+    display: inline;
+    font-size: 35px;
+    background-color: yellow;
+    padding-left: 20px;
+    color: yellowgreen;
+}
+
+a{
+    background-color: yellow;
+    color: yellowgreen;
+}
+
+a:hover{
+background-color: grey;
+}
+
+@media only screen and (max-width: 500px) {
+     .menus{
+        font-size: 15px;
+     }
+}

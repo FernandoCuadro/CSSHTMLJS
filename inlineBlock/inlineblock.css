@@ -1,0 +1,48 @@
+*{
+    font-size: 20px;
+    font-family: Georgia;
+    
+}
+
+/*Display:Modifica el comportamiento de las cajas 
+Block = Ocupa todo el ancho de la caja no importa lo que pongas
+Inline = Ocupa lo que ocupa el elemento usado
+Inline-Block = Se le puede asignar tamaño que va a ocupar
+Table = Se comporta como tabla
+Inline-Table = Se comporta como tabla en linea
+Table-cell = Se comporta como celda
+Table-Row = Se comporta como fila horizontal de celdas
+Table-Column = Se comporta como fila Vertical de celdas*/
+
+
+#lin1{
+    background-color: cadetblue;
+    border: solid 1px black;
+    display: inline-block;
+    width: 90px;
+    height: 40px;
+}
+
+#lin2{
+    background-color: chartreuse;
+    border: solid 1px red;
+    display: inline-block;
+    width: 90px;
+    height: 40px;
+}
+
+#lin3{
+    background-color: blueviolet;
+    border: solid 1px blue;
+    display: inline-block;
+    width: 90px;
+    height: 40px;
+}
+
+#lin4{
+    background-color: chocolate;
+    border: solid 1px yellow;
+    display: inline-block;
+    width: 90px;
+    height: 40px;
+}

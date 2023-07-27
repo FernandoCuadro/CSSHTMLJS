@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.responsivo{
+    font-size: 15px;
+    font-family: Arial;
+    display: inline-block;
+    width: 45%;
+    background-color: aqua;
+    border: 2px solid red;
+}
+
+@media only screen and (max-width: 600px) /*Cuando la resolucion es menor a 600px se ajustara el texto*/ {
+    .responsivo{
+        display: block;
+        width: 100%;
+        background-color: green;
+    }
+}
+
+/*Responsive Design = Trabaja con las distintas resoluciones para asi adaptar la resolucion 
+                        a distintos dispositivos 
+                        
+    First mobile: Adapta al reves osea adapta desde la resolucion mobile a la resolucion tablet y luego 
+                    a la resolucion laptop
+    Media Query: Detecta una resolucion y permite cambiar las etiquetas*/

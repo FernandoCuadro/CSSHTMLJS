@@ -1,0 +1,677 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: tomato;
+    font-family: 'itim', cursive;
+    
+
+}
+
+.nave__responsiv-ul{
+    display: none;
+}
+
+.nave{
+    background-color: blue;
+    border: 1px solid red;
+    
+  }
+
+.nave__li{
+    display: inline-block;
+    padding: 7px;
+}
+
+.nave__li a {
+    color: azure;
+}
+
+.nave__li a:hover{
+    color: black;
+}
+
+@media only screen and (max-width: 500px){
+    .nave__ul{
+        display: none;
+    }
+}
+ /*sirve para empezar un menu responsive, al llegar menos de 500 px se va el menu normal para que entre el responsive*/   
+
+
+
+h1{
+    text-align: center;
+    
+}
+
+h1:hover{
+    color: blueviolet;
+    text-decoration: underline;
+}
+
+.estilo-h2{
+    text-decoration: wavy;
+    text-shadow: 50px;
+    text-align: left;
+}
+
+#tablita{
+    list-style: circle;
+    list-style-position: unset;
+}
+
+[atributo="atrib"]{
+    color: blueviolet;
+}
+
+b{
+    color: black;
+}
+
+b span{
+    color: blue;
+}
+
+.form__input{
+    color: red;
+}
+
+.form__input--primero{
+    color: blue;
+}
+
+.form__p-h2{
+    color:green;
+}
+
+.medidas{
+    font-size: 20px;
+    width: 50vw;
+    height: 50vh;
+   
+    
+}
+
+.medidas__medFija{
+    font-size: 50px;
+    line-height: 1; /* altura de la letra */
+    font-weight: normal; /*grosor de letras*/
+    display: inline; /* el h2 se convierte en elemento linea(ocupa lo que ocupa el texto) 
+    en vez de bloque(ocupa toda la anchura), los enline no se le puede dar height o width */
+}
+
+.medidas__medRelativa{
+    font-size: 1em;
+    line-height: 1;
+    font-weight: normal;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: inline;
+    
+}
+
+.intento {
+    background-color: aqua;
+    padding-top: 4px;
+    padding-bottom: 8px;
+    /*width: 100%;
+    height: 40px;*/
+}
+
+.titulito {
+background-color: blue;    
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+padding-left: 40px;
+
+padding-bottom: 5px;
+padding-right: 90px;
+font-size: 30px;
+color: chartreuse;
+box-shadow: 2px 3px 10px 0 black;
+
+display: inline;
+}
+
+.a1{
+    background-color: blueviolet;
+    margin: 0 0 0 0;
+    box-shadow: 2px 3px 4px 0 black, 2px 3px 4px 0 black;
+    outline: 2px solid red; /*es como un borde pero no mueve las demas cajas, seria mas para marcar*/
+    
+}
+
+.a2{
+    background-color: blue;
+    margin-right: 0px;
+    border-radius: 20px;
+    transform: rotate(90deg); /*Funciona solo con cajas*/
+    border: 2px solid red;
+}
+
+.caja1{
+    background-color: blue;
+    width: 120px;
+    height: 120px;
+    display: block;
+    position: relative; 
+    /* la posicion afecta el flujo del html, es el orden en que ponemos los elementos con las posiciones lo cambiamos,
+    position absolute 
+    saca el espacio reservado para las cajas, 
+    tambien se ajusta al contenido de la caja
+    position static
+    es como si no estuviera posicionada
+    position relative
+    el espacio de las cajas se guarda osea las medidas que les des siguen estando a diferencia del absolute*/
+    top: 70px;
+
+
+}
+
+.caja2{
+    background-color: green;
+    width: 120px;
+    height: 120px;
+    display: block;
+    position: relative;
+    z-index: 1; /* el z index es la posicion si arriba o abajo de otro objeto  */
+    top: 80px; 
+    left: 60px;
+    bottom: 100px; /* se toma mas en cuenta top y left que las demas, al no estar si tomara el bottom */
+}
+
+.cajas{
+    /* toma el punto de referencia el contenedor porque esta posicionado, si fuera static no lo tomaria */
+    position: relative; 
+    background-color: rgb(56, 129, 129);
+   border: 1px solid red;
+   width: 250px;
+   height: 250px;
+   
+}
+.cajita1{
+    position: absolute;
+    top: 0px;
+    background-color: red;
+    width: 50px;
+    height: 50px;
+}
+.cajita2{
+    position: absolute;
+    right: 0px;
+    background-color: blue;
+    width: 50px;
+    height: 50px;
+}
+.cajita3{
+    position: absolute;
+    bottom: 0px;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+}
+.cajita4{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-color: violet;
+    width: 50px;
+    height: 50px;
+}
+.cajita5{
+    position: absolute;
+  /* margin: 100px;  para centrar es la mitad del contenedor - la mitad de las cajas de adentro, 
+        esto aplica si sabes las dimensiones de las cajas */
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    /* si no sabes las dimensiones eso servira */
+    background-color: yellowgreen;
+    width: 50px;
+    height: 50px;
+}
+
+.pepe{
+    background: red;
+    position: fixed; /*Es como absolute, pero con la diferencia que el texto te sigue en pantalla, 
+    como una alerta, serviria para advertir de un campo vacio por ejemplo */
+}
+
+.stic{
+    background: red;
+    position: sticky;/*Es como un relative y fixed, queda fijo ocupa un lugar fijo,
+    pero podes indicarle hasta donde bajar o dejar de bajar*/
+    top: 100px
+}
+
+/*display es modificar el comportamiento de las cajas como block y inline que ya se sabe lo que hacen
+    bloque: cubre todo el ancho de la pagina no importa el contenido que pongas 
+    inline: ocupa solo lo que el contenido les da
+    inline block: la diferencia que tiene con bloque es que le podemos dar el ancho y alto de la caja, permitiendo poner una caja al lado de la otra
+    table: se comporta como tabla
+    inline-table: se comporta como tabla en linea
+    table-cell: se comporta como celda
+    table-row: se comporta como una fila horizontal de celdas 
+    table-column: se comporta como fila vertical de celdas
+*/
+  .lin1{
+    background: red;
+    border: 2px solid black;
+    display: inline-block;
+    width: 100px;
+    height: 20px;
+
+   
+    
+  }  
+  .lin2{
+    background: yellow;
+    border: 2px solid black;
+    display: inline-block;
+    width: 300px;
+    height: 20px;
+
+   
+    
+  }  
+  .lin3{
+    background: violet;
+    border: 2px solid black;
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    
+
+   
+    
+  }  
+  .lin4{
+    background: green;
+    border: 2px solid black;
+    display: inline-block;
+    width: 100px;
+    height: 20px;
+
+   
+    
+  }
+  
+  .rueda{
+    background-color: gray;
+    width: 200px;
+    height: 150px;
+    border: 1px solid green;
+    overflow: auto;
+    /*overflow es lo que sobresale la pantalla.
+    auto: detecta si el texto sobresale la pantalla y lo corrige
+    hidden: oculta el scroll
+    scroll muestra el scroll si o si aunque no se necesite
+    es un yorjan porque abrevia dos : overflow-y y overflow-x*/
+  }
+
+  .elflota div{
+    float: right; /*se usaba antiguamente para ordenar texto al lado de otro, ya que el inline block no puede por el tamaño de los texto */
+    width: 50%;
+  }
+  .primero{
+    
+    background-color: blue;
+  }
+    .segundo{
+    background-color: aqua;
+ } 
+ 
+ img{
+    width: 80px;
+ } 
+ .contimg{
+    width: 50%;
+    border: 2px solid green;
+ }
+ .contimg img{ /* se especifica img dentro del div para priorizar*/
+    float: right; /*Esto es lo mejor que puede hacer float el texto envuelve a la imagen creando este efecto*/
+   
+ }
+.Pseudoelemento{
+    padding: 20px;
+} 
+.Pseudoelemento::first-line{
+    color: red;
+}
+.Pseudoelemento::first-letter{
+    font-size: 30px;
+    color: yellow;
+}
+/* de esta forma se escribe un pseudoelemento pudiendole dar propiedades, en este caso se colorea la primera linea no importa si tiene responsive o no
+Pseudoelemento: es un elemento que no es un elemento, no forma parte del DOM, 
+hay cambios visuales pero no forma parte. No funciona con elementos inline
+Los Pseudoelementos que requieren la etiqueta content no froman parte del DOM (before, after)
+First-line First-letter si forman parte del DOM, se pueden selecvcionar copiar, etc*/
+
+
+.PseudoelementoSelec{/*El form se comporta como div*/
+background: red;
+padding: 20px;
+width: 50%;
+}
+.eltex{
+    padding: 20px;
+    width: 100%;
+    
+}
+.eltex::placeholder{
+    color: royalblue;
+    background-color: red;
+    font-size: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.eltex::selection{
+    color: green;
+    background-color: black;
+}
+
+/*.Pseudoelemento selection: a partir de lo que selecciono se puede modificar el color azul por ejemplo, sirve tambien para texto comun (p)*/
+
+.afterej{
+ color: blue;
+}
+/*after es hijo del elemento a que se aplica, se necesita la propiedad content, el elemento aftero o before no se podra copiar no aparece en el DOM
+*/
+.afterej::before{
+    color: aqua;
+    content: "la paja ";
+}
+
+.afterej::after{
+    color: violet;
+    content:" pulmon";
+}
+
+.hovep{
+    display: block;
+    background-color: aqua;
+    width: 100px;
+    height: 100px;    
+    transition: background 2s, width 0.1s, height 0.1s; 
+    /*transition: all 2s;
+    nos permite ajustar las velocidades 
+    con que ocurren las transiciones principalmente en hover
+    */
+
+}
+
+.hovep:hover{
+    background: blue;
+    width: 300px;
+    height: 300px;
+}
+
+.link:link{
+    color: red;
+}
+
+.link:visited{
+    color: darkblue;
+    
+}
+
+.activ{
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+    transition: all 0.1s;
+    
+}
+
+.activ:active{
+    background-color: red;
+    width: 200px;
+    height: 100px;
+    
+
+}
+
+.foc{
+    transition: all 0.1s;
+   
+}
+.foc:focus{
+   
+background-color: yellow;
+margin-left: 100px;
+
+
+}
+
+.lan:lang(en){
+    background-color: aqua;
+    color: red;
+}
+
+/*Las pseudoclases son escucha un evento
+:hover = escucha el evento cuando el raton esta encima, realiza una accion cuando el raton pasa
+:link = modifica los link que no se hayan visitado
+:visited =modifica las paginas ya visitadas
+:active = al dejar apretado un boton cambia los estilos
+:focus = se aplica a los input, es cuando el elemento esta en foco
+:lang = usado para el lenguaje*/
+
+
+.objetofit{
+background-color: blueviolet;
+width: 500px;
+height: 200px;
+}
+
+.objetofit img{
+    width: 500px;
+    height: 200px;
+    display: flex;
+    object-fit: contain;
+    object-position: 98px;
+
+}
+/*object-fit: propiedad dedicada a las imagenes, modificar las resouciones, areglar problemas
+Propiedades
+contain:prpiedad pr defecto hae qe a imagen se ajuste al contenido
+cover: la imagen se ajusta al contenedor
+none: no realiza cambios a la imagen deja la original
+scale-down: se queda con la resolucion mas chica
+*/
+
+/*object-position: posicion de imagenes tanto top,left,right,bottom o con las medidad*/
+
+/*cursor= persoalizar o ambiar el cursor
+puede cambiar tamien cuando esta la caja activa*/
+
+.raton{
+    border: 2px solid red;
+    width: 300px;
+    height: 300px;
+    cursor: crosshair;
+}
+.raton:active{
+    cursor: cell;
+}
+
+/*colores= existen varias formas de definir clores
+color name: por el normbre de color  el navegador puede poner cualquier color dentro del seleccionado
+hexadecimal: codigo hexa del color no se podra cambiar 
+rgb:red green blue colores primarios de la informatica mezclando los tres colores se puede formar cualquier color
+las medidas son del 0 al 255 rgb(10,0,1)*/
+
+
+/*
+responsive design= trabaja con las distintas resoluciones adaptar una resolucion a varios dispositivos
+mobile first= hace al reves que responsive, adapta  desde la resolucion de celular a una resolucion de tablet y luego al de pc
+media query: detecta una resolucion y permite cambiar las etiquetas
+*/
+
+
+.responsivo{
+    width: 45%;
+    display: inline-block;
+    background: aqua;
+    border: 1px solid red;
+    
+    
+}
+
+   
+
+
+@media only screen and (max-width: 600px) {
+    .responsivo {
+      display: block;
+      width: 100%;
+    }
+  }
+ /* responsive, cando la pantalla alcane resoluciones menores a 800px ajustar las cajas para que se aprecien mejor*/
+
+
+.flexcont{
+ display: flex;
+}
+
+.flexitem{
+    background-color: aqua;
+    color: green;
+    padding: 2px;
+    margin: 4px;
+    
+}
+
+   /*flexbox= cajas flexibles es una nueva forma de maquetar, flex requiere de dos cosass
+  un flex container que es el contenedor, actua como un display block, cambia en los item que esten
+  dentro
+  en flexbox esta el cross axis (eje Y) y el main axis (eje X) 
+  cross start y cross end forman cross axis, y main start y main end forman main axis
+  los items dentro de un flex son flex item, cuando hay un div dentro del flex se comporta como flex item
+  pero el contenido de ese div no*/
+
+.flexcontcaj{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}  
+.flexitemcaj{
+    background-color: chartreuse;
+    margin: 4px;
+    min-width: 100px;
+    height: 120px;
+    flex-grow: 1;
+    
+}
+
+/*Flex direction: nos permite cambiar la direccion de los items, la propiedad se utiliza en el contenedor aunque
+afecta tambien a los items
+row: valor por defecto se posiciona como van la filas
+colum: se comporta como una columna
+row-reverse: en vez de ir de izquierda a derecha va al reves como un espejo
+column-reverse: en espejo va de abajo hacia arriba
+flex-wrap = 
+wrap : no es flexible ya no mantiene los tiems en la misma linea 
+warp-reverse: en vez de irse hacia abajo se va hacia arriba
+nowarp: valor por defecto, no hace efecto el warp
+flex-flow: abreviar flex-direction y flex-wrap se usa cuando vas a usar las dos si o si
+
+justify-content= manejo del contenido para alinearlo
+center: centra contenido
+space-around: da espacio al contenido
+space-between: da un  margen automatico a las cajas
+space-around:deja la mayor cantidad de espacio entre cajas
+space-evenly: deja el mismo margen entre cajas a diferencia del around que son distintas medidas
+para alinear en el cross-axis se usa
+align-items= se usa cuando hay una linea de items flexitems
+srtreth: propiedad por defecto
+flex-start:los ubica al final, con la propiedad por defecto se estira toda el height de la pagina, con start no
+flex:end:: los ubica al final de la pagina
+center: centra los flex items  
+baseline:
+
+align-content = Lo mismo pero cuando hay mas de una linea
+*/
+/*
+flex item:darle propiedades a los itemes en vez del ontenedor
+el margin dentro de una caja se comporta distinto, osea hace lo contrario a que le digamos si pones margin-top: auto; iria hacia abajo
+flex-grow: agarra el espacio sobrante y lo reparte entre las cajas que quedan lo que se vuelven flexible las cajas
+flex-basis: es como un width pero le da mas impotancia en las cajas flex
+flex-shrink: la cajas al ser flexile aunque le des un width de 200px no respetara a que es flexible con el tamaño de la pantalla
+el flex-shrink hace ontrola el espacio que tienen las cajas sire para organizar el tamao de las cajas
+flex: agrupa las propiedades anteriores en una flex(flex-grow flex-shrink flex-basis)
+order: como el z-index(el que tenga valr mas grande va arriba), pero con el exe x(axis) el que tenga el valor mas grande va al final*/
+
+
+/*Grid: es un estilo de layout y es una propiedad del display, trabaja en el layout a traves de grillas
+_ grid-conteainer= es toda la grilla
+_Grid-item= es cada elemento que forme parte del container, son los hijos diretos del container
+_Grid-cell=son cada una de las divisiones del grid
+_Grid-track(column row)=row son filas y column son filas en vertical
+_Grid-area = son rangos que seleccionamos nosotros ademas son consecutivas, no se oueden tener cruces en una misma grilla tampoco L y tienen que ser o vertical o horizontal
+_Grid-line (column line, row line)=las primeras lineas son donde empieza el grid
+ */
+
+.griCont{
+    display: grid;
+    grid-template-rows: 100px 100px 100px; /*crea las filas va en el container*//*fr = al darle 1fr rellena la pantalla con la fila que se le dio*/
+    grid-template-columns: 150px 150px 150px;/*crea las columnas va en el container*/
+    grid-template-columns: repeat(3, 150px) 1fr; /*repite tantas colmnas como se pongan*/
+   /* grid-row-gap: 30px; margin entre celdas se separan entre ellas no e contenedor*/
+   /* grid-column-gap: 30px;margin entre columnas*/
+}
+ 
+ .griItem{
+    border: 1px solid royalblue;
+ }
+
+ .griItem:first-child{ /*Selecciona el primer elemeto*/
+    background-color: red;
+    grid-column: 1 / 3; /*haemos que la primera celda sea grande hasta la tercera columna
+    lo que provoca que se mueva todo el grid*/
+    grid-row: 1 / 3;
+ }
+
+ .griItem:nth-child(2){
+    background-color: black;
+    grid-row: 1 / 5;
+    grid-column: 3 / 4;
+    /*grid-row: 1 / span 3; para que ocupe 3 columnas o filas*/
+ }
+
+ .griItem:nth-child(3){
+    background-color: yellow;
+    
+ }
+
+ /*Grid explicito: cuando hacemos un gridde 3 filas se crean 4 porque agregaste celda de mas o por espacios
+ grid-auto-rows(column): pone las medidas que se le da a cada celda
+ grid-auto-flow: podes poner o column o rows y las celdas sobrantes se comportan como dicha propiedad
+ grid-auto-flow: dense = si hay espacios vacios los rellena
+ 
+ Grid dinamico:estructuras sinamicas para que el grid sea mas flexible
+ minmax(): se usa en el  grid-template-column: repeat(3, minmax(100px, 300px)), le da a grid una medida maxima y minima, se puede usar
+ min-content(mnimo que mide una celda) y max-content(maximo que mide una celda)
+ auto-fill: se usa en el repeat, genera tantas columnas que cumplan con las condiciones grid-template-column: repeat(autofill, minmax(100px, 1fr))
+ auto-fit: escala la diferencia cuando agrandas la pantlla*/
+
+ /*Alineación y control de flujo
+ la diferencia con flex es que tiene dos aliniaciones,
+ una aliniacion que se aplica a todos los items (el contenedor)
+ una aliniacion de columnas y filas(el contenedor) 
+ una aliniacion particular a cada elemento
+justify-items : center = centra las cajas start= las pone al inicio end = las pone al final
+align-items : center = centra las cajas verticalmente stretch=valor por defecto
+
+justify-content:center =alinea las columnas
+align-content:center = alinea las filas
+estas dos tambien tienen las opciones del flex
+
+align-self:center = sirve para alinear un item solo dentro del grid de forma vertical
+justify-self:center = de forma horizontal
+grid-item:nth-child(3){}
+place-self align justify= simplificar las propiedades anteriores 
+
+order=ordena los items va en valores de mayor a menor 
+*/
+ 

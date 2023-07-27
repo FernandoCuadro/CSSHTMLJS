@@ -1,0 +1,59 @@
+*{
+    font-size: 20px;
+    font-family: 'Times New Roman';
+}
+
+div{
+    background-color: gray;
+    width: 300px;
+    border: 2px solid green;
+    
+}
+
+#pseudoelemento::first-letter{
+    color: rgb(236, 1, 1);
+}
+
+#pseudoelemento::first-line{
+    color: aqua;
+}
+
+
+/*
+Pseudoelemento = Es un elemento que no es un elemento, no forma parte del DOM.
+Hay cambios visuales pero no forma parte. Los pseudoelementos que requieren la 
+etiqueta content no forman parte del DOM (before, after), First-letter First-Line
+si forman parte del DOM, se pueden seleccionar y copiar
+Pseudoelemento::selection = a partir de lo que selecciono se puede hacer algo, tambien sirve para texto
+*/
+
+
+#form{
+    background-color: aquamarine;
+    padding: 20px;
+    width: 50%;
+}
+
+#texto{
+    padding: 20px;
+    width: 100%;
+}
+
+#conttext{
+    width: 50%;
+    background-color: azure;
+    border: 2px solid black;
+}
+
+#texto::placeholder{
+    color: blue;
+    background-color: aqua;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+#texto::selection{
+    color: green;
+    background-color: black;
+}

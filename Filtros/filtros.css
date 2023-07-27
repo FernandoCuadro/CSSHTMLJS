@@ -1,0 +1,49 @@
+/*Filter
+    Es una forma de darle filtros
+    se le da filtros con las siguientes propiedades:
+    -filter: none := ninguno
+    -filter: blur(px):= desenfoca
+    -filter: brightness := escala de brillo que va a tener
+    -filter: contrast() := escala de contraste que va a tener    
+    -filter: box-shadow(px px px color) := hace un efecto de sombra en la caja
+    -filter: drop-shadow(px px px color) := sirve para imagenes transparentes, les da sombra
+    -filter: grayscale() := le da una escala de gris
+    -filter: hue-rotate(deg) := invierte la gama de colores
+    -filter: invert():=invierte colores
+    -filter: opacity():= opacidad de la imagen
+    -filter: saturate(%) := satura los colores con los colores mas fuertes
+    -filter: sepia():= se vuelve sepia
+*/
+
+
+div{
+    filter: sepia(1);
+}
+
+.practica{
+    filter: contrast(20);
+    background: whitesmoke;
+}
+
+.caja{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin: 40px;
+    background: red;
+    border-radius: 50%;
+    filter: blur(20px);
+}
+
+.caja:first-child{
+    animation: traso 3s alternate infinite;
+}
+
+@keyframes traso{
+    0%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translate(160px);
+    }
+}

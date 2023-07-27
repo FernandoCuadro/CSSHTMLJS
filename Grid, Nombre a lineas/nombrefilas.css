@@ -1,0 +1,30 @@
+
+
+#nombrefilas{
+    display: grid;
+    background-color: gray;
+    grid-template-columns: 
+                [primeraL]
+                200px
+                [segundaL]
+                200px
+                [terceraL]
+                200px
+                [finalL]
+    ;
+    grid-template-rows: repeat(3, 200px);
+}
+
+/*Al ponerle nombre a las filas o columnas no es necesario remplazarlas con numeros*/
+
+.items{
+    background-color: aquamarine;
+    border: 1px solid black;
+}
+
+.items:first-child{
+    grid-column: primeraL / finalL;
+    grid-row: 1 / 3;
+}
+
+

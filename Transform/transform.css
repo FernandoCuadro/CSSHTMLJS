@@ -1,0 +1,57 @@
+/*
+Tranfsorm
+    Nos permite transformar un objeto de varias formas,
+    las transformaciones reciben funciones
+        
+    esta forma de transformar es por desplazamiento=
+        transform: translateX(20px) =:se desplaza en eje x
+        transform: translateY(20px) =:se desplaza en eje y
+        transform: translate(x, y) =: se desplaza en los dos
+    si le das en porcentaje se basara en las medidas del item
+    para animaciones o mover objetos esta es la mejor opcion ya que tiene una mejor optimizacion,
+    ademas solo mueve el elemento seleccionado en vez de mover todo el layout como un left
+    
+    Esta forma de transformar es por escalado=
+        transform: scaleX(1) := escala en x
+        transform: scaleY(0.5):= escala en y
+        transform: scale(2):= escala en ambos
+    dependiendo el tamaño escala 1 es la medida inicial del item, 2 es el doble y asi    
+        
+    Esta forma de transformar es deformando la figura=
+        transform: skew(30deg) se usan grados para deformar
+    
+    */
+
+
+#contenedor{
+    padding: 20px 5px;
+    background-color: gray;
+}
+
+#figura{
+    background-color: green;
+    height: 80px;
+    width: 80px;
+    margin: 20px;
+    transition: transform 2s;
+}
+
+
+#figura:hover{
+    transform: scaleY(2) translate(80px);
+}
+
+#figura2{
+    background-color: blue;
+    height: 80px;
+    width: 80px;
+    margin: 20px;
+    transform: skew(-30deg);
+}
+
+#figura2:hover{
+    
+    transform: skew(-30deg) rotate(50deg);
+    
+}
+

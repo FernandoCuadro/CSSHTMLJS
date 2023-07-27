@@ -1,0 +1,14 @@
+
+
+.Link:link{
+color: black;
+}
+
+.Link:visited{
+
+    font-size: 12px;
+    color: blue;
+}
+
+/*Link = modifica los links que no han sido visitados
+Visited= modifica los links que ya han sido visitados*/

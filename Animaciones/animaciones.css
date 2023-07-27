@@ -1,0 +1,62 @@
+/*
+Animaciones
+    Funcionan parecido a las transacciones, pero requieren de una regla
+        -@KeyFrames que es la forma en la que se definen las animaciones
+*/
+
+
+.contenedor{
+    background-color: gray;
+    padding: 20px 5px;
+    
+}
+
+.item{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    margin: 20px;
+    animation-name: desplazamiento; /*Parametro obligatorio para la animacion*/
+    animation-duration: 2s; /*Duracion de la animacion*/
+    position: relative;
+    animation-timing-function: cubic-bezier(.14,2.79,.6,.23);/*Igual al del transition, a diferencia que tambien tiene la propiedad
+                                    cubic bezier, que es la curva en la cual podremos darle mas velocidad
+                                    de ida o vuelta,se logra muchas animaciones para hacer*/
+    animation-iteration-count: infinite; /*Cuantas veces se repite la animacion*/
+    animation-direction: normal; /*cambia el sentido de la animacion, va de 100% a 0%*, 
+                                    normal: deja todo normal 
+                                    reverse: cambia el sentido
+                                    alternate: actua como normal y reverse va y vuelve
+                                    alternate-reverse: lo mismo pero empieza del lado del reverse*/
+    animation-fill-mode: forwards; /*Define como va a quedar la animacion
+                                      none: queda normal
+                                      forwards: queda como la dejamos definida 100% si el direction es normal
+                                      0% si es reverse y asi, se queda como finaliza
+                                      both: Arranca con la propiedad de la animacion osea o el 0% o 100%*/                                
+}
+
+/*Regla       nombre asignado */
+@keyframes desplazamiento{
+0%{
+    
+    left:0;
+}
+
+50%{
+    background: red;
+}
+
+100%{
+    left: 80%;
+}
+}
+
+
+/*
+Hay dos formas de definir como se va a comportar una animacion:
+    -from {} to{}:en from son las propiedades del objeto cuando comienza
+                  en to son las propiedades del objeto cuando termina
+    -0%{} 50%{} 100%{}: a diferencia del from to, en el porcentaje se pueden usar otros porcentajes
+                        ademas del principio y final, lo que permite realizar mas animaciones
+
+*/

@@ -1,0 +1,38 @@
+#caja1{
+    width: 120px;
+    height: 120px;
+    background-color: red;
+    border: solid 1px black;
+    display: block;
+    position: relative;
+    top: 60px;
+    z-index: 2; /*es la posicion si arriba o abajo de otro objeto*/
+    
+    /*La posicion es el orden en el que ponemos los elementos, afecta el flujo html
+    POSITION ABSOLUTE:
+    Saca el espacio reservado para las cajas, tambien se ajusta al contenido de la caja.
+    POSITION STATIC:
+    Es como si no estuviera posicionada.
+    POSITION RELATIVE:
+    El espacio de las cajas se queda guardado a diferencia del absolute que se adapta
+    */
+}
+
+#caja2{
+    width: 120px;
+    height: 120px;
+    background-color: aqua;
+    border: solid 1px black;
+    display: block;
+    position: relative;
+    top: 45px;
+    left: 45px;
+    bottom: 100px; /* se toma mas en cuenta top y left que las demas, al no estar si tomara el bottom */
+    z-index: 1;
+}
+
+
+
+
+
+

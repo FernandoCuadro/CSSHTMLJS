@@ -1,0 +1,17 @@
+*{
+    margin: 70px;
+    pad: 70px;
+}
+
+#caja{
+    transition: all 2s;
+}
+
+
+#caja:focus{
+    background-color: blueviolet;
+    margin-left: 300px;
+    margin-top: -300px;
+}
+
+/*Focus= se aplica a las cajas de texto, es cuando esta en foco o seleccionada*/

@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+#fija{
+    font-family: 'Times New Roman';
+    font-size: 200px;
+    line-height: 2px;/*altura de la letra*/
+    font-weight: 2px;/*grosor de la letras*/
+    display: inline; /*el h2 pasa a ser elemente en linea, es decir ocupa lo que ocupa el texto*/
+}
+
+#relativa{
+    font-family: 'Gill Sans';
+    font-size: 7em; /*REM y EM son una medida relativa, 1em por defecto son 16px, se puede
+    cambiar el valor por defecto definiendo los px mas arriba ejemplo en un DIV, funciona por 
+    herencia*/
+    font-weight: 1px;
+    display: inline;
+}

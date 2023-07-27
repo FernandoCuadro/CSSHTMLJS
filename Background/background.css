@@ -1,0 +1,28 @@
+*{
+    font-size: 30px;
+}
+
+#contenedor{
+    padding:  5px 2px;
+    margin: 20px;
+    background: aquamarine;
+    width: 100%;
+    height: 400px;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_RlyphIVHHyGIdmEgg9IcVe8qebeHk4NGDA&usqp=CAU);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-attachment: fixed;
+    
+}
+
+/*Se puede usar el background-image: url() para poner una imagen,
+con background-size: cover la imagen se ajusta mas a la caja
+con background-size: contain la imagen se ajusta pero se repite
+con background-repeat: no-repeat la imagen no se repite
+background-clip: border-box-padding-box-content-box, se corta la imagen dependiendo de donde le des
+background-origin: lo mismo pero la imagen se origina de donde le des
+background-position: combinas direcciones, no puedes ser la misma direccion
+
+background-attachment: scroll forma parte del objeto y toma referencia del contenedor
+background-attachment: fixed es fijo y toma de referencia el viewport lo que crea un efecto bastante usado*/

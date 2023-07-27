@@ -1,0 +1,69 @@
+.home{
+    display: flex;
+    flex-direction: column; /*Cambia la direccion a vertical*/
+    height: 100vh;
+    
+}
+
+.header, .main, .asider, .footer{
+    padding: 20px;
+}
+
+
+.header{
+    background-color: aquamarine;
+    flex-basis: 60px;
+}
+
+.main{
+    background-color: blueviolet;
+    flex-basis: 400px;
+    flex-grow: 2;
+    flex-shrink: 0;
+}
+
+.asider{
+    background-color: burlywood;
+    flex-basis: 200px;
+    flex-grow: 1;
+    flex-shrink: 0;
+
+    
+}
+
+.footer{
+    background-color: chartreuse;
+    flex-grow: 1;
+}
+
+@media screen and (min-width: 600px) {
+    .home{
+        display: grid;
+        grid-template-rows: 80px 1fr 1fr 1fr 1fr 80px;
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+    .header{
+       grid-column: 1 / span 3;
+    }
+
+    .main{
+        grid-row: 2 / 6;
+        grid-column: 1 / 3;
+    }
+
+    .asider{
+       grid-row: 2 / 6;
+    }
+
+    .footer{
+        grid-row: 6 / 7;
+        grid-column: 1 / span 3;
+
+    }
+    
+}
+
+
+
+

@@ -1,0 +1,59 @@
+*{
+    font-family: Tahoma;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+.caja{
+    margin: 20px;
+    padding: 20px;
+    position: absolute;
+    left: 35%;
+    top: 25%;
+    
+    background-color: aqua;
+    border: 3px solid red;
+
+}
+
+.nombres{
+    font-size: 15px;
+    display: inline-block;
+}
+
+.cajas{
+    display: block;
+    background-color: antiquewhite;
+    font-family: cursive;
+    width: 300px;
+}
+.cajas:hover{
+    background-color: chartreuse;
+}
+
+.checkbox{
+    display: inline-block;
+    background-color: cadetblue;
+    
+}
+
+p{
+    display: inline;
+    font-family: 'Arial Narrow Bold';
+    font-size: 12px;
+}
+
+.boton{
+   display: block;
+   width: 100%;
+   height: 30px;
+   font-family: 'Times New Roman';
+   font-size: 25px;
+   background-color: cornflowerblue;
+}
+img{
+    width: 100%;
+    height: 100%;
+}

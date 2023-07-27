@@ -1,0 +1,22 @@
+*{
+    font-size: 20px;
+    font-family: Lucida;    
+}
+
+img{
+    width: 200px;
+}
+
+#contenedor{
+    width: 70%;
+    background-color: gray;
+    border: 1px solid black;
+}
+
+#contenedor img{
+    float: right;
+}
+
+/*Se especifica la imagen dentro del div para priorizarla
+El float lo que hace es envolver la imagen y correrla a la derecha, creando el efecto
+*/

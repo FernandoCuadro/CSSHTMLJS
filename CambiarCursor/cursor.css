@@ -1,0 +1,16 @@
+*{
+    margin: 50px;
+    padding: 50px;
+}
+#cursor{
+    width: 500px;
+    height: 200px;
+    background-color: cyan;
+    border: 2px solid red;
+    cursor: crosshair;
+}
+/*Cursor = Personalizar el cursor*/
+
+#cursor:active{
+    cursor: all-scroll;
+}

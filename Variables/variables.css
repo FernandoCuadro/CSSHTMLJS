@@ -1,0 +1,34 @@
+/*
+Variables
+    Espacio que se almacena en memoria
+    existen dos tipos:
+    -locales = se pueden utilizar dentro de un elemento
+    -globales = son las que se pueden utilizar desde cualquier elemento
+  para poner variables es -- en la pestaña root  
+    */
+
+:root{
+    --violeta: #f50;
+}
+
+    div{
+        padding: 20px;
+        margin: 30px;
+        height: 150px;
+        width: 150px;
+    }
+
+    p{
+        --violeta: #655;
+        width: 30px;
+        height: 30px;
+        background: var(--violeta);
+    }
+
+    #contenedor1{
+        background: var(--violeta);
+    }
+
+    #contenedor2{
+        background: red;
+    }

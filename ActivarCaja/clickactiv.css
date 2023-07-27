@@ -1,0 +1,20 @@
+*{
+    margin: 50px;
+    padding: 50px;
+}
+
+#activa{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    border: 2px solid red;
+}
+
+#activa:active{
+    width: 400px;
+    height: 200px;
+    background-color: red;
+    border: 2px solid aqua;
+}
+
+/*Active = Al apretar el click cambia los estilos de un objeto*/
